@@ -26,7 +26,9 @@ jobs:
     steps:
       - run:
           name: "Say world"
-          command: "echo world!"
+          command: |
+            echo world!
+            echo $USERNAME
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
