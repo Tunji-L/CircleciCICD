@@ -68,6 +68,6 @@ workflows:
           requires:
             - say-hello
       - save_hello_output
-      - print_output_file
+      - print_output_file:
           requires:
             - save_hello_output
