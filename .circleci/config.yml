@@ -74,6 +74,13 @@ jobs:
           command: |
             echo world!
             echo $USERNAME
+            return 1
+
+      - run:
+          name: "Failure test"
+          command: |
+            echo "This has ran after the failure"
+          when: on_fail
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
